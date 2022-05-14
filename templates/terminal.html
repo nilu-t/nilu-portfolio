@@ -1,0 +1,14 @@
+<!doctype html>
+<b>use the command 'help' to see the list of available commands.</b>
+  <html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static',filename='node_modules/xterm/css/xterm.css') }}" />
+      <script text="text/javascript" src="{{ url_for('static',filename='node_modules/xterm/lib/xterm.js') }}">
+      </script>
+    </head>
+    <body>
+      <div id="terminal"></div>
+      <script text="text/javascript" src="{{ url_for('static',filename='scripts/terminal.js') }}">
+      </script>
+    </body>
+  </html>

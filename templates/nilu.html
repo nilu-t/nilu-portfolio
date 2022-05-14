@@ -3,3 +3,7 @@
 <h2>Welcome to my portfolio</h2>
 <br>
 Use the terminal to navigate my portfolio website !
+<!--Using jinja to include the terminal template in this html file-->
+{% include 'terminal.html' %}
+<br>
+<a href="{{ url_for('projects') }}">Link for projects</a>
