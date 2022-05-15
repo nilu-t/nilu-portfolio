@@ -1,0 +1,75 @@
+/**
+ * Hex colours and descriptions used.
+ * #E5E8E8 - light grey.
+ * #5D6D7E - dark grey.
+ * #111111 - dark grey (almost black).
+ * #85ff8f - very bright green.
+ * #66FF00 - bright green.
+ * #2d6a03 - dark green.
+ */
+
+
+/* Global styles
+------------------------------------------- */
+body{
+    background-color: #000000;
+}
+
+p{
+    color:whitesmoke;
+}
+a:link{
+    color:#66FF00;
+    text-decoration: none;
+}
+
+a:visited{
+    color:#2d6a03; /*darker green when the link is clicked.*/
+}
+
+a:hover{
+    color:#85ff8f;
+}
+
+/* Class selector specific styles
+--------------------------------------- */
+.full_name{
+    text-align: center;
+    color: #66FF00;
+    font-size: xx-large;
+}
+
+.routes{
+    text-align: center;
+}
+
+.routes ul{
+    list-style: none;
+}
+
+.routes ul li{
+    display:inline;
+    color:#66FF00;
+    background-color: black;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px; /*rounded edges to create a 'button' look to each list item.*/
+    font-size:large;
+}
+
+.title_page{
+    background-color: #111111;
+    padding-bottom: 5px;
+    border: 3px ridge #66FF00; /* ridge 3d border effect.*/
+}
+
+.instructions{
+    color:#66FF00;
+}
+
+.xterm_div .xterm .xterm-screen{
+    /* using the descendent .xterm-screen to add a border around the terminal. */
+    border: 1px dashed #66FF00;
+}
