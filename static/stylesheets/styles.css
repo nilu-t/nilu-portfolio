@@ -39,6 +39,21 @@ a:hover{
     font-size: xx-large;
 }
 
+#full_name{
+    color: #66FF00;
+    display: inline;
+    position: absolute;
+}
+
+#full_name::after{
+    content:"";
+    display: inline-block;
+    width:7px;
+    height:25px;
+    animation: blink-cursor 0.5s steps(2) infinite; /* calling the blink cursor animation for duration of 0.5 seconds in stops of 2 running forever.*/
+    background: #66FF00;
+}
+
 .routes{
     text-align: center;
 }
@@ -62,6 +77,7 @@ a:hover{
 .title_page{
     background-color: #111111;
     padding-bottom: 5px;
+    border-radius: 25px; /*rounded edges to create a circular title page.*/
     border: 3px ridge #66FF00; /* ridge 3d border effect.*/
 }
 
@@ -72,4 +88,14 @@ a:hover{
 .xterm_div .xterm .xterm-screen{
     /* using the descendent .xterm-screen to add a border around the terminal. */
     border: 1px dashed #66FF00;
+}
+
+
+/* Animations for keyframes
+----------------------------------------------*/
+@keyframes blink-cursor {
+    /* At keyframe state 0% opacity of the cursor becomes transparent.*/
+    from{
+        opacity: 0;
+    }
 }

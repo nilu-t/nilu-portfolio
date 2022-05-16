@@ -1,33 +1,36 @@
 <!doctype HTML>
 
-<head>
-    <!-- Adding the CSS style to the style sheet-->
-    <link rel="stylesheet" href= " {{ url_for('static',filename='stylesheets/styles.css') }}">
-</head>
+<body>
+    <head>
+        <!-- Adding the CSS style to the style sheet-->
+        <link rel="stylesheet" href= " {{ url_for('static',filename='stylesheets/styles.css') }}">
+    </head>
 
-<div class="title_page">
-    <h1 class="full_name">Nilushanth Thiruchelvam:$</h1>
-    <section class="routes">
-        <ul>
-            <li><a href="{{ url_for('home') }}">/home 🏡</a></li>
-            <li><a href="{{ url_for('about') }}">/about 👀</a></li>
-            <li><a href="{{ url_for('education') }}">/education 📚</a></li>
-            <li><a href="{{ url_for('contact') }}">/contact info 👤</a></li>
-            <li><a href="{{ url_for('projects') }}">/projects 🔥</a></li>
-            <li><a href="{{ url_for('games') }}">/mini games 🎮</a></li>
-        </ul>
-    </section>
-</div>
-
-<div class="terminal_div">
-    <h3 class="instructions">Terminal Instructions</h3>
-    <p>
-        Use the terminal to navigate my portfolio website ! Enter the 'help' command to see the list of available commands.
-    </p>
-    <!--Using jinja to include the terminal template in this html file-->
-    <div class="xterm_div">
-        {% include 'terminal.html' %}
+    <div class="title_page">
+        <h1 class="full_name">Nilushanth Thiruchelvam:$ <div id="full_name">&nbsp</div> </h1>
+        <section class="routes">
+            <ul>
+                <li><a href="{{ url_for('home') }}">/home 🏡</a></li>
+                <li><a href="{{ url_for('about') }}">/about 👀</a></li>
+                <li><a href="{{ url_for('education') }}">/education 📚</a></li>
+                <li><a href="{{ url_for('contact') }}">/contact info 👤</a></li>
+                <li><a href="{{ url_for('projects') }}">/projects 🔥</a></li>
+                <li><a href="{{ url_for('games') }}">/mini games 🎮</a></li>
+            </ul>
+        </section>
     </div>
-</div>
-}
-<br>
+
+    <div class="terminal_div">
+        <h3 class="instructions">Terminal Instructions</h3>
+        <p>
+            Use the terminal to navigate my portfolio website ! Enter the 'help' command to see the list of available commands.
+        </p>
+        <!--Using jinja to include the terminal template in this html file-->
+        <div class="xterm_div">
+            {% include 'terminal.html' %}
+        </div>
+    </div>
+    <br>
+
+    <script src="{{ url_for('static', filename='scripts/nilu.js') }}"></script>
+</body>
