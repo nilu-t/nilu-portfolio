@@ -2,16 +2,16 @@
 //terminal words to represent my name.
 const terminal_words = [
     /** Greetings */
-    "Hello there (^-^)/",
-    "My name is Nilushanth.",
-    "You can call me Nilu !",
+    "Hello there ( •_•)",
+    "I'm Nilu.",
+    "Welcome to my corner of the internet.",
     
     /** Tell them about the site */
     "Navigate the site with the menu below.",
     "or you can use the terminal.",
 
     /** Programming lanuages I know */
-    "I'm skilled in...",
+    "I'm proficient in...",
     "Java development",
     "Bash scripting",
     "Javascript development",
@@ -26,10 +26,11 @@ const terminal_words = [
 
     /** Telling them to check out the rest of the site */
     "Check out the rest of the site.",
-    "Have fun (^-^)/"
+    "Beware of hulk below (●´⌓`●)"
+
 ];
 
-var delaySpeed = 40;
+var delaySpeed = 40; //The delay speed in milliseconds.
 
 var row = 0;
 var col = 0;
@@ -50,10 +51,13 @@ function typeEachCharacter(){
     if (col == terminal_words[row].length){
         col = 0; //reset the column.
         row++; //increment the row by 1.
-        setTimeout(clear, 2000); //invoking the clear function after 2 second.
+        setTimeout(clear, 2500); //invoking the clear function after 2.5 second.
 
     }
     else if(col < terminal_words[row].length){
+        if(col == 0){
+            document.getElementById("full_name").innerHTML += "> <br>&nbsp>&nbsp";
+        }
         document.getElementById("full_name").innerHTML += terminal_words[row][col];
         col++;
         setTimeout(typeEachCharacter, delaySpeed); //type the next character with delayed speed.

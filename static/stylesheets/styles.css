@@ -27,7 +27,7 @@ a:link{
 }
 
 a:visited{
-    color:#2d6a03; /*darker green when the link is clicked.*/
+    color:#66FF00; /* no change in colour when the link is clicked.*/
 }
 
 a:hover{
@@ -36,11 +36,24 @@ a:hover{
 
 /* Class selector specific styles
 ----------------------------------------------- */
+.outer_title_page_div{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.title_page_div{
+    background-color: #111111;
+    padding-left: 50px;
+    border-radius: 25px; /*rounded edges to create a circular title page.*/
+    border: 3px ridge #66FF00; /* ridge 3d border effect.*/
+    width: 65vw;
+}
+
 .full_name_div{
-    text-align: center;
     color: #66FF00;
     font-size: xx-large;
     display: block;
+
 }
 
 #full_name{
@@ -81,21 +94,19 @@ a:hover{
     font-size:large;
 }
 
-.title_page_div{
-    background-color: #111111;
-    padding-bottom: 5px;
-    border-radius: 25px; /*rounded edges to create a circular title page.*/
-    border: 3px ridge #66FF00; /* ridge 3d border effect.*/
-
+.terminal_div{
+    display: flex;
+    justify-content: center;
 }
 
 .instructions{
     color:#66FF00;
+    display: block;
 }
 
 .xterm_div .xterm .xterm-screen{
     /* using the descendent .xterm-screen to add a border around the terminal. */
-    border: 1px dashed #66FF00;
+    border: 5px ridge #66FF00;
 }
 
 .hulk_smash_div{
@@ -105,8 +116,15 @@ a:hover{
     background-repeat: no-repeat;
     animation: hulk-smash-animation 9s steps(9) infinite; /* 9 steps since there are 9 sprites total. */
     display: inline-flex;
+}
 
-
+.ground_div{
+    height: 16px; /*height of each sprite */
+    width: 100vw; /* width of 1 sprite is 80px. 9 sprites total but only 1 is displayed each step. */
+    background-image: url('../sprites/ground/ground_split_spritesheet.png');
+    background-repeat: no-repeat;
+    animation: ground-split-animation 2s ease-in infinite alternate-reverse;
+    display: inline-block;
 }
 
 /* Animations for keyframes
@@ -148,5 +166,14 @@ a:hover{
 @keyframes hulk-smash-text-animation {
     from{
         color: #66FF00;
+    }
+}
+
+@keyframes ground-split-animation {
+    from{
+        background-position: 0px;
+    }
+    to{
+        background-position: calc(16px * -2);
     }
 }
