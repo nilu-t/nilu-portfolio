@@ -12,9 +12,12 @@
 /* Global styles
 ------------------------------------------- */
 body{
-    background-color: #000000;
+    height: 100vh; /* 100% of the available height is filled. Since body selector does not have size by default.*/
+    width: 100vw; /* 100% of the available width is filled. Since body selector does not have size by default. */
+    background: linear-gradient(#000000, #032105, #032105, #000000);
+    background-position: center;
 }
-
+    
 p{
     color:whitesmoke;
 }
@@ -32,16 +35,17 @@ a:hover{
 }
 
 /* Class selector specific styles
---------------------------------------- */
-.full_name{
+----------------------------------------------- */
+.full_name_div{
     text-align: center;
     color: #66FF00;
     font-size: xx-large;
+    display: block;
 }
 
 #full_name{
     color: #66FF00;
-    display: inline;
+    display: inline-block;
     position: absolute;
 }
 
@@ -63,9 +67,12 @@ a:hover{
 }
 
 .routes ul li{
-    display:inline;
+    display:inline-flex;
     color:#66FF00;
-    background-color: black;
+    /* background-color: black; */
+    animation: menu-animation 2s ease-in infinite alternate,/*animating the menu background colours*/
+               up-down-animation 4.5s ease-in infinite alternate; /*animating the menu up and down when the hulk smashes.*/
+    animation-delay: 0s, 4s;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 5px;
@@ -74,11 +81,12 @@ a:hover{
     font-size:large;
 }
 
-.title_page{
+.title_page_div{
     background-color: #111111;
     padding-bottom: 5px;
     border-radius: 25px; /*rounded edges to create a circular title page.*/
     border: 3px ridge #66FF00; /* ridge 3d border effect.*/
+
 }
 
 .instructions{
@@ -90,6 +98,16 @@ a:hover{
     border: 1px dashed #66FF00;
 }
 
+.hulk_smash_div{
+    height: 100px; /*height of each sprite */
+    width: 79px; /* width of 1 sprite is 80px. 9 sprites total but only 1 is displayed each step. */
+    background-image: url('../sprites/hulk_poses/smash/hulk_smash_spritesheet.png');
+    background-repeat: no-repeat;
+    animation: hulk-smash-animation 9s steps(9) infinite; /* 9 steps since there are 9 sprites total. */
+    display: inline-flex;
+
+
+}
 
 /* Animations for keyframes
 ----------------------------------------------*/
@@ -97,5 +115,38 @@ a:hover{
     /* At keyframe state 0% opacity of the cursor becomes transparent.*/
     from{
         opacity: 0;
+    }
+}
+
+@keyframes menu-animation {
+    from{
+        background-color: #001c05;
+    }
+    to{
+        background-color: #000000;
+    }
+}
+
+@keyframes hulk-smash-animation {
+    from{
+        background-position: 0px;
+    }
+    to{
+        background-position: calc(80px * -9); /* total width of spritesheet. */
+    }
+}
+
+@keyframes up-down-animation {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes hulk-smash-text-animation {
+    from{
+        color: #66FF00;
     }
 }
