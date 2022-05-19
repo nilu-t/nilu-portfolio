@@ -17,10 +17,10 @@ def about():
 def projects():
     return render_template("projects.html")
 
-#education page.
-@app.route('/education')
-def education():
-    return "This is the education page. Under construction."
+#skills page.
+@app.route('/skills')
+def skills():
+    return "This is the skills page. Under construction."
 
 #contact info page.
 @app.route('/contact')

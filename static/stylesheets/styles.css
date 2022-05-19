@@ -8,16 +8,32 @@
  * #2d6a03 - dark green.
  */
 
-
 /* Global styles
 ------------------------------------------- */
 body{
     height: 100vh; /* 100% of the available height is filled. Since body selector does not have size by default.*/
     width: 100vw; /* 100% of the available width is filled. Since body selector does not have size by default. */
-    background: linear-gradient(#000000, #032105, #032105, #000000);
-    background-position: center;
+    background: linear-gradient(#000000, #001608,#032105, #032105, #001608, #000000); /*radiation image at the front, gradient at the back.*/
+    background-size: 100vw 100vh;
+    background-repeat: round;
+
+    position: relative;
+    overflow: hidden;
 }
-    
+
+body::before{
+    content:"";
+    position: absolute;
+    z-index: -1;
+    background: url("../sprites/radiation/radiation.png");
+    height: 100vh; /*100% of the available height is filled. Since body selector does not have size by default. */
+    width: 100vw; /*100% of the available width is filled. Since body selector does not have size by default. */
+    background-size: 100px;
+    background-repeat: round;
+
+    animation: go-into-animation 10s ease-in-out infinite alternate-reverse;
+}
+
 p{
     color:whitesmoke;
 }
@@ -169,11 +185,11 @@ a:hover{
     }
 }
 
-@keyframes ground-split-animation {
-    from{
-        background-position: 0px;
-    }
-    to{
-        background-position: calc(16px * -2);
+@keyframes go-into-animation {
+    /* from 0% to 50% animation applied. Between 50% to 100% nothing changes. */
+    50%, 100%{
+        opacity: 0%;
+        filter:blur(5px);
+        transform: scale(2);
     }
 }

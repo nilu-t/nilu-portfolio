@@ -1,4 +1,4 @@
-<!doctype HTML>
+<!DOCTYPE HTML>
 
 <body>
     <head>
@@ -14,7 +14,7 @@
                     <div class="hulk_smash_div"></div>
                     <li><a href="{{ url_for('home') }}">/home 🏡</a></li>
                     <li><a href="{{ url_for('about') }}">/about 👀</a></li>
-                    <li><a href="{{ url_for('education') }}">/education 📚</a></li>
+                    <li><a href="{{ url_for('skills') }}">/skills 📚</a></li>
                     <li><a href="{{ url_for('contact') }}">/contact info 👤</a></li>
                     <li><a href="{{ url_for('projects') }}">/projects 🔥</a></li>
                     <li><a href="{{ url_for('games') }}">/mini games 🎮</a></li>
@@ -26,18 +26,17 @@
     
     <br>
     <br>
-    
+
     <div class="terminal_div">
         <div class="xterm_div">
         <h3 class="instructions">Terminal Instructions</h3>
         <p>
             Use the terminal to navigate my portfolio website ! Enter the 'help' command to see the list of available commands.
         </p>
-        <!--Using jinja to include the terminal template in this html file-->
-            {% include 'terminal.html' %}
+            {% include 'terminal.html' %} <!--Using jinja to include the terminal template in this html file-->
         </div>
     </div>
-    <br>
 
     <script src="{{ url_for('static', filename='scripts/nilu.js') }}"></script>
-</body>
+
+</body> <!-- body div closing div tag-->

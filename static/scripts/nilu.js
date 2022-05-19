@@ -26,11 +26,11 @@ const terminal_words = [
 
     /** Telling them to check out the rest of the site */
     "Check out the rest of the site.",
-    "Beware of hulk below (●´⌓`●)"
+    "Beware of Hulk below... (●´⌓`●)"
 
 ];
 
-var delaySpeed = 40; //The delay speed in milliseconds.
+var delaySpeed = 30; //The delay speed in milliseconds.
 
 var row = 0;
 var col = 0;
