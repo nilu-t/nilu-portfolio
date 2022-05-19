@@ -28,7 +28,7 @@ body::before{
     background: url("../sprites/radiation/radiation.png");
     height: 100vh; /*100% of the available height is filled. Since body selector does not have size by default. */
     width: 100vw; /*100% of the available width is filled. Since body selector does not have size by default. */
-    background-size: 100px;
+    background-size: 300px;
     background-repeat: round;
 
     animation: go-into-animation 10s ease-in-out infinite alternate-reverse;
@@ -189,7 +189,7 @@ a:hover{
     /* from 0% to 50% animation applied. Between 50% to 100% nothing changes. */
     50%, 100%{
         opacity: 0%;
-        filter:blur(5px);
+        filter:blur(50px);
         transform: scale(2);
     }
 }
