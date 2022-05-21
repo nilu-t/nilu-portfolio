@@ -13,7 +13,8 @@
 body{
     height: 100vh; /* 100% of the available height is filled. Since body selector does not have size by default.*/
     width: 100vw; /* 100% of the available width is filled. Since body selector does not have size by default. */
-    background: linear-gradient(#000000, #001608,#032105, #032105, #001608, #000000); /*radiation image at the front, gradient at the back.*/
+    background-color: #032105; /* default background colour in case something goes wrong. */
+    background-image: linear-gradient(#000000,#032105, #032105, #000000); /*gradient at the back.*/
     background-size: 100vw 100vh;
     background-repeat: round;
 
@@ -25,13 +26,13 @@ body::before{
     content:"";
     position: absolute;
     z-index: -1;
+
     background: url("../sprites/radiation/radiation.png");
     height: 100vh; /*100% of the available height is filled. Since body selector does not have size by default. */
     width: 100vw; /*100% of the available width is filled. Since body selector does not have size by default. */
-    background-size: 300px;
+    background-size: 250px;
     background-repeat: round;
-
-    animation: go-into-animation 10s ease-in-out infinite alternate-reverse;
+    animation: go-into-animation 5s ease-in-out 1;
 }
 
 p{
@@ -134,15 +135,6 @@ a:hover{
     display: inline-flex;
 }
 
-.ground_div{
-    height: 16px; /*height of each sprite */
-    width: 100vw; /* width of 1 sprite is 80px. 9 sprites total but only 1 is displayed each step. */
-    background-image: url('../sprites/ground/ground_split_spritesheet.png');
-    background-repeat: no-repeat;
-    animation: ground-split-animation 2s ease-in infinite alternate-reverse;
-    display: inline-block;
-}
-
 /* Animations for keyframes
 ----------------------------------------------*/
 @keyframes blink-cursor {
@@ -186,10 +178,9 @@ a:hover{
 }
 
 @keyframes go-into-animation {
-    /* from 0% to 50% animation applied. Between 50% to 100% nothing changes. */
-    50%, 100%{
+    50%{
         opacity: 0%;
-        filter:blur(50px);
-        transform: scale(2);
+        filter:blur(25px);
+        transform: scale(5) rotate(120deg);
     }
 }

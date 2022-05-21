@@ -8,21 +8,15 @@ const terminal_words = [
     
     /** Tell them about the site */
     "Navigate the site with the menu below.",
-    "or you can use the terminal.",
+    "Or you can use the terminal.",
 
     /** Programming lanuages I know */
-    "I'm proficient in...",
-    "Java development",
+    "The languages I'm proficient in are...",
+    "Java",
     "Bash scripting",
-    "Javascript development",
-    "Python development",
+    "Javascript, HTML, CSS for web development",
+    "Python development (also Flask framework)",
     "C programming",
-
-    /** Soft skills I have */
-    "I also have skills in...",
-    "Creativity",
-    "Problem-solving",
-    "Time management",
 
     /** Telling them to check out the rest of the site */
     "Check out the rest of the site.",

@@ -1,0 +1,36 @@
+
+/* Global styles 
+---------------------------------------------*/
+
+body{
+    height: 100vh; /* 100% of available height is filled */
+    width: 100vw; /* 100% of available width is filled */
+    background-image: linear-gradient(#000000,#032105, #032105, #000000);
+    color: whitesmoke;
+}
+
+h1, h3, b{
+    color: #66FF00;
+}
+
+p{
+    padding-left: 200px;
+    padding-right: 1000px;
+    color: whitesmoke;
+}
+
+ul{
+    color: whitesmoke;
+}
+
+
+/* Class and ID selector styles
+---------------------------------------------*/
+.p_div{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Keyframes
+---------------------------------------------*/

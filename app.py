@@ -10,7 +10,7 @@ def home():
 #about page.
 @app.route('/about')
 def about():
-    return "This is the about page. Under construction."
+    return render_template("about.html")
 
 #projects page url.
 @app.route('/projects')
@@ -20,14 +20,14 @@ def projects():
 #skills page.
 @app.route('/skills')
 def skills():
-    return "This is the skills page. Under construction."
+    return render_template("skills.html")
 
 #contact info page.
 @app.route('/contact')
 def contact():
-    return "This is the contact info page. Under construction."
+    return render_template("contact_info.html")
 
 #mini games page.
 @app.route('/mini_games')
 def games():
-    return "This is the mini games page. Under construction."
+    return render_template("mini_games.html")
