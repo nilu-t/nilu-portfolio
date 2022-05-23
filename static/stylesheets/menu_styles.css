@@ -34,6 +34,61 @@ ul{
     cursor:pointer;
 }
 
+/* for contact_info.html specific styles. -------------------------------------------*/
+.contact_div{
+    height:100vh; /* height is 100% of the available page height */
+    width: 100vw; /* width is 100% of the available page width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact_info_div{
+    font-size:xx-large;
+    flex: 2;
+}
+
+.email_div{
+    font-size:xx-large;
+    flex:2;
+}
+
+input[type=text], input[type=submit]{
+    /* attribute selector for type text*/
+    width: 70%;
+    background-color: transparent;
+    border: 1px ridge aqua;
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    color: aquamarine;
+}
+input[type=email]{
+    /* attribute selector for type email*/
+    width: 70%;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: 1px ridge aqua;
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+
+}
+textarea[type=text]{
+    width: 70%;
+    background-color: transparent;
+    border: 1px ridge aqua;
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    resize: none;
+}
+
+input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=text]::placeholder{
+    color: aquamarine;
+}
+
 /* for skills.html specific styles. ------------------------------------------------- */
 .skills_div{
     display:flex;
