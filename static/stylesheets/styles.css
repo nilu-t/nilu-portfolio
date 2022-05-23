@@ -51,7 +51,7 @@ a:hover{
     color:#85ff8f;
 }
 
-/* Class selector specific styles
+/* Class and ID selector specific styles
 ----------------------------------------------- */
 .outer_title_page_div{
     display: flex;

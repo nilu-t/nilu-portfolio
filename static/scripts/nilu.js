@@ -58,4 +58,20 @@ function typeEachCharacter(){
     }
 }
 
-typeEachCharacter(); //calling the method to type each terminal_words element by character.
+let full_name =  document.getElementById("full_name");
+//if the name element exists then type each character function is called.
+if(full_name != null){
+    typeEachCharacter(); //calling the method to type each terminal_words element by character.
+}
+
+let back_btn = document.getElementById("back_btn");
+
+//if the button elements exist then check for the event listeners. This is done because this script exists in multiple HTML files.
+if(back_btn != null){
+    /* HTML inline click event listeners in JS for each button control*/
+    document.getElementById("back_btn").onclick=function(){
+        console.log("clicked back button");
+        window.location.replace("/"); //redirect to the home page.
+    };
+
+}

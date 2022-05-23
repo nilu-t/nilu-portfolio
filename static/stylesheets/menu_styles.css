@@ -1,7 +1,6 @@
 
 /* Global styles 
 ---------------------------------------------*/
-
 body{
     height: 100vh; /* 100% of available height is filled */
     width: 100vw; /* 100% of available width is filled */
@@ -13,24 +12,82 @@ h1, h3, b{
     color: #66FF00;
 }
 
-p{
-    padding-left: 200px;
-    padding-right: 1000px;
-    color: whitesmoke;
-}
-
 ul{
     color: whitesmoke;
 }
 
-
 /* Class and ID selector styles
 ---------------------------------------------*/
-.p_div{
-    display: flex;
-    justify-content: center;
+
+/* common for all html files (excluding nilu.html obviously) */
+.controls_div{
+    padding-right: 80px;
+    padding-left: 80px;
 }
 
+.controls_div img{
+    width: 80px;
+    height: 80px;
+}
 
+.controls_div img:hover{
+    cursor:pointer;
+}
+
+/* for about.html specific styles.*/
+.about_div{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.intro_div{
+    background-color: #111111;
+    font-size: xx-large;
+    border: 3px ridge #66FF00;
+    flex: 2;
+}
+.intro_div h1{
+    text-align: center;
+}
+.intro_div a{
+    background-color: #000000;
+    border: #66FF00 3px ridge;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.intro_div a:visited{
+    color:#66FF00;
+}
+.intro_div a:hover{
+    color:#85ff8f;
+}
+.media_div{
+    flex: 1;
+    padding-left: 100px;
+    font-size: x-large;
+}
+.media_div ul{
+    list-style: none;
+    display: inline;
+}
+.media_div ul li{
+    padding: 10px 10px 10px 10px;
+    border-radius:10px;
+    border: 1px ridge aqua;
+    display: inline-flex;
+    background-color: #111111;
+}
+
+.media_div ul li a{
+    text-decoration: none;
+}
+.media_div ul li a:visited{
+    color:aquamarine;
+}
+.media_div ul li a:hover{
+    color:#85ff8f;
+}
 /* Keyframes
 ---------------------------------------------*/

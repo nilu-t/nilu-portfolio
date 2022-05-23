@@ -4,28 +4,42 @@
     <head>
         <link rel="stylesheet" href=" {{ url_for('static',filename='stylesheets/menu_styles.css') }}">
     </head>
-    
-    <h1>Hello, welcome to my site!</h1>
 
-    <div class="p_div">
-        <p>
-            I'm Nilushanth Thiruchelvam, a third year computer science student 
-            at York University. I'm currently enhancing my web development skills
-            using Javascript, HTML and CSS by learning popular Javascript frameworks
-            like NodeJS, ReactJS and Angular. Also, I'm further enhancing my web 
-            development skills using Python through the Flask framework. In my leisure 
-            time I like to play chess <a href="https://www.chess.com/member/nilu06">
-            (challenge me to a game of chess on Chess.com 👀)</a>, online games, and 
-            create both web and mobile apps for fun! My passion for web development and 
-            mobile development originate from using logical and creative thinking to be
-            able to create unique websites from scratch. This website is created to display
-            my skills I acquired from my personal projects and education.
-        </p>
+    <div class="about_div">
+
+        <div class="controls_div">
+            <img id="back_btn" src="static/sprites/game_controls/back.png" width="50" height="50">
+            <br>
+        </div>
+
+        <div class="intro_div">
+            <h1>Hello, welcome to my site!</h1>
+
+            <p>
+                I'm <b>Nilushanth Thiruchelvam</b>, a third year computer science student 
+                at York University. I'm currently enhancing my web development skills
+                using Javascript, HTML and CSS by learning popular Javascript frameworks
+                like NodeJS, ReactJS and Angular. Also, I'm further enhancing my web 
+                development skills using Python through the Flask framework. In my leisure 
+                time I like to play chess <a href="https://www.chess.com/member/nilu06">
+                (challenge me to a game of chess on Chess.com 👀)</a>, online games, and 
+                create both web and mobile apps for fun! My passion for web development and 
+                mobile development originate from using logical and creative thinking to be
+                able to create unique websites from scratch. This website is created to display
+                my skills I acquired from my personal projects and education.
+            </p>
+        </div>
+
+        <div class="media_div">
+            <h3>Look me up on</h3>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/nilushanth-thiruchelvam/">LinkedIn</a></li>
+                <li><a href="https://github.com/nilu-t">Github</a></li>
+            </ul>
+        </div>
+
     </div>
 
-    <h3>Look me up on</h3>
-    <ul>
-        <li>LinkedIn</li>
-        <li>Github</li>
-    </ul>
+    <script src="{{url_for('static',filename='scripts/nilu.js')}}"></script>
+
 </body>
