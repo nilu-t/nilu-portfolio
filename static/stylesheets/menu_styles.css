@@ -34,7 +34,90 @@ ul{
     cursor:pointer;
 }
 
-/* for about.html specific styles.*/
+/* for skills.html specific styles. ------------------------------------------------- */
+.skills_div{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height:100vh;
+    justify-content: center; /* centering in the middle of the main axis.*/
+    align-content: center; /* important for the multiline divs centering*/
+}
+.web_dev_div{
+    padding-right: 100px;
+    font-size: xx-large;
+}
+.web_dev_div h1{
+   text-align: center;
+}
+.web_dev_div ul{
+    list-style: none;
+}
+.web_dev_div ul li{
+    display:inline-flex; /* The list items behave like inline elements */
+    background-color: #111111;
+    padding:10px 10px 10px 10px;
+    border: 1px ridge aqua;
+    border-radius: 10px;
+    color:aquamarine;
+}
+
+.mobile_dev_div{
+    font-size: xx-large;
+
+}
+
+.mobile_dev_div ul{
+    list-style: none;
+}
+.mobile_dev_div ul li{
+    display:inline-flex; /* The list items behave like inline elements */
+    background-color:#111111;
+    padding:10px 10px 10px 10px;
+    border: 1px ridge aqua;
+    border-radius: 10px;
+    color:aquamarine;
+
+}
+.languages_div{
+    font-size: xx-large;
+    padding-right: 100px;
+    padding-left: 180px; /* to align with 100px padding left + 80px back btn width*/
+}
+.languages_div h1{
+    text-align: center;
+}
+.languages_div ul{
+    list-style: none;
+}
+.languages_div ul li{
+    display: inline-flex; /* The list items behave like inline elements */
+    background-color:#111111;
+    padding:10px 10px 10px 10px;
+    border: 1px ridge aqua;
+    border-radius: 10px;
+    color:aquamarine;
+
+}
+.other_skills_div{
+    font-size: xx-large;
+}
+.other_skills_div h1{
+    text-align: center;
+}
+.other_skills_div ul{
+    list-style: none;
+}
+.other_skills_div ul li{
+    display: inline-flex; /* The list items behave like inline elements */
+    background-color:#111111;
+    padding:10px 10px 10px 10px;
+    border: 1px ridge aqua;
+    border-radius: 10px;
+    color:aquamarine;
+}
+
+/* for about.html specific styles. --------------------------------------------------------*/
 .about_div{
     height: 100vh;
     width: 100vw;
@@ -56,6 +139,7 @@ ul{
     border: #66FF00 3px ridge;
     border-radius: 5px;
     text-decoration: none;
+    color:#66FF00;
 }
 .intro_div a:visited{
     color:#66FF00;
@@ -82,6 +166,7 @@ ul{
 
 .media_div ul li a{
     text-decoration: none;
+    color:aquamarine;
 }
 .media_div ul li a:visited{
     color:aquamarine;

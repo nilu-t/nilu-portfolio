@@ -135,6 +135,9 @@ a:hover{
     display: inline-flex;
 }
 
+.hulk_smash_div:hover{
+    cursor:help;
+}
 /* Animations for keyframes
 ----------------------------------------------*/
 @keyframes blink-cursor {
