@@ -71,7 +71,7 @@ if(back_btn != null){
     /* HTML inline click event listeners in JS for each button control*/
     document.getElementById("back_btn").onclick=function(){
         console.log("clicked back button");
-        window.location.replace("/"); //redirect to the home page.
+        window.location.replace("/"); //redirect to the home page using previous history.
     };
 
 }

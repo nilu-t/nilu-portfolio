@@ -46,7 +46,18 @@ ul{
 
 .contact_info_div{
     font-size:xx-large;
-    flex: 2;
+    flex: 1;
+    border: 3px ridge #66FF00;
+    background-color: #111111;
+    margin-right: 50px;
+}
+
+.contact_info_div h1{
+    text-align: center;
+}
+
+.contact_info_div p{
+    margin-left: 15px;
 }
 
 .email_div{
@@ -73,7 +84,6 @@ input[type=email]{
     font-size:large;
     font-family: 'Times New Roman', Times, serif;
     border-radius: 5px;
-
 }
 textarea[type=text]{
     width: 70%;
@@ -84,7 +94,9 @@ textarea[type=text]{
     border-radius: 5px;
     resize: none;
 }
-
+input[type=submit]:hover{
+    cursor: pointer;
+}
 input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=text]::placeholder{
     color: aquamarine;
 }
@@ -115,6 +127,7 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=tex
     border: 1px ridge aqua;
     border-radius: 10px;
     color:aquamarine;
+    margin-bottom: 10px;
 }
 
 .mobile_dev_div{
@@ -132,6 +145,8 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=tex
     border: 1px ridge aqua;
     border-radius: 10px;
     color:aquamarine;
+    margin-bottom: 10px;
+
 
 }
 .languages_div{
@@ -152,6 +167,7 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=tex
     border: 1px ridge aqua;
     border-radius: 10px;
     color:aquamarine;
+    margin-bottom: 10px;
 
 }
 .other_skills_div{
@@ -170,6 +186,7 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=tex
     border: 1px ridge aqua;
     border-radius: 10px;
     color:aquamarine;
+    margin-bottom: 10px;
 }
 
 /* for about.html specific styles. --------------------------------------------------------*/
@@ -185,6 +202,10 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=tex
     font-size: xx-large;
     border: 3px ridge #66FF00;
     flex: 2;
+}
+.intro_div p{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .intro_div h1{
     text-align: center;
@@ -217,6 +238,8 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=tex
     border: 1px ridge aqua;
     display: inline-flex;
     background-color: #111111;
+    margin-bottom: 10px;
+
 }
 
 .media_div ul li a{
