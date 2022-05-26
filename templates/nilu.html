@@ -4,6 +4,7 @@
     <head>
         <!-- Adding the CSS style to the style sheet-->
         <link rel="stylesheet" href= " {{ url_for('static',filename='stylesheets/styles.css') }}">
+        <script src="{{ url_for('static', filename='scripts/nilu.js') }}" defer></script>
     </head>
 
     <div class="outer_title_page_div">
@@ -38,7 +39,5 @@
             {% include 'terminal.html' %} <!--Using jinja to include the terminal template in this html file-->
         </div>
     </div>
-
-    <script src="{{ url_for('static', filename='scripts/nilu.js') }}"></script>
 
 </body> <!-- body div closing div tag-->

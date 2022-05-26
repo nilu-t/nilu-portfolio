@@ -239,9 +239,7 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=tex
     display: inline-flex;
     background-color: #111111;
     margin-bottom: 10px;
-
 }
-
 .media_div ul li a{
     text-decoration: none;
     color:aquamarine;

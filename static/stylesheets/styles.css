@@ -32,7 +32,7 @@ body::before{
     width: 100vw; /*100% of the available width is filled. Since body selector does not have size by default. */
     background-size: 250px;
     background-repeat: round;
-    animation: go-into-animation 5s ease-in-out 1;
+    animation: go-into-animation 5s linear 1;
 }
 
 p{
@@ -181,9 +181,9 @@ a:hover{
 }
 
 @keyframes go-into-animation {
-    50%{
+    from{
         opacity: 0%;
-        filter:blur(25px);
-        transform: scale(5) rotate(120deg);
+        filter:blur(20px);
+        transform: scale(6) rotate(120deg);
     }
 }
