@@ -3,16 +3,47 @@ var term = new Terminal({
 });
 
 term.open(document.getElementById('terminal'));
-term.write('nilu\'s portfolio $: ')
+term.write('nilu\'s portfolio $: ');
 
-const ws = new WebSocket('ws://localhost:8082'); //the websocket on port 8082.
+let input = '';
 
-var command = "";
-term.onKey(e=>{
-    command += e.key;
-    term.write(e.key);
-    if(e.key == '\r'){
-        term.write('\n');
-        ws.send(command)
+term.onKey(({ key }) => {
+    switch (key) {
+        case '\r': // Enter key
+            term.write('\n\r');
+            
+            if (input.trim() === 'help') {
+                fetch('http://127.0.0.1:8080/help')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        term.write(data);
+                        input = '';
+                        term.write("\n\rnilu's portfolio $: ");
+                    })
+                    .catch(error => {
+                        term.write('Error: ' + error);
+                    });
+            }
+            else{
+                input = '';
+                term.write("\rnilu's portfolio $: ");
+            }
+            
+            break;
+        case '\u007F': // Backspace/Delete key
+            if (input.length > 0) {
+                term.write('\b \b');
+                input = input.slice(0, -1);
+            }
+            break;
+        default: // Normal character input
+            term.write(key);
+            input += key;
+            break;
     }
-})
+});

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <!-- Adding the CSS style to the style sheet-->
+        <link rel="stylesheet" href= " {{ url_for('static',filename='stylesheets/menu_styles.css') }}">
+        <script src="{{ url_for('static', filename='scripts/nilu.js') }}" defer></script>
+    </head>
+  <body>
+    <div class="workexp_div">
+      <h2>Internships</h2>
+      <div class="internship">
+        <h3 class="job_title">Data Collection Engineer Intern @ Blue Guardian</h3>
+        <h4 class="job_duration">March 2023 - Present</h4>
+        <ul class="job_responsibilities">
+          <li>Scraped 160,000 tweets, including 80,000 depression-related and 80,000 control tweets using Python's Snscrape library, enhancing Blue Guardian's Machine Learning model development.</li>
+          <li>Streamlined data management by exporting tweet data to CSV files with Pandas, enabling efficient processing.</li>
+          <li>Collaborated with cross-functional teams to understand project requirements and deliver relevant datasets tailored to the needs of each team.</li>
+          <li>Contributed to one of the most accurate depression models to date with the data collected during the internship.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

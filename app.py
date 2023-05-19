@@ -28,7 +28,7 @@ def skills():
 def contact():
     return render_template("contact_info.html")
 
-#mini games page.
-@app.route('/mini_games')
-def games():
-    return render_template("mini_games.html")
+#work experience page.
+@app.route('/work')
+def work():
+    return render_template("work_experience.html")

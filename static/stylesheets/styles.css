@@ -27,12 +27,12 @@ body::before{
     position: absolute;
     z-index: -1;
 
-    background: url("../sprites/radiation/radiation.png");
-    height: 100vh; /*100% of the available height is filled. Since body selector does not have size by default. */
-    width: 100vw; /*100% of the available width is filled. Since body selector does not have size by default. */
-    background-size: 250px;
-    background-repeat: round;
-    animation: go-into-animation 5s linear 1;
+    background: url("../sprites/chess_pattern/knight_pattern.png") no-repeat center center;
+    height: 100vh;
+    width: 100vw;
+    background-size: contain;
+    animation: go-into-animation 10s ease-in-out 1;
+    /* filter: blur(1px); */
 }
 
 p{
@@ -111,14 +111,19 @@ a:hover{
     font-size:large;
 }
 
-.terminal_div{
-    display: flex;
-    justify-content: center;
+.terminal_div {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-25%, -50%);
+    text-shadow: -6px 0 6px black, 0 6px 6px black, 6px 0 6px black, 0 -6px 6px black;
 }
+
 
 .instructions{
     color:#66FF00;
     display: block;
+    text-shadow: -6px 0 6px black, 0 6px 6px black, 6px 0 6px black, 0 -6px 6px black;
 }
 
 .xterm_div .xterm .xterm-screen{
@@ -184,6 +189,6 @@ a:hover{
     from{
         opacity: 0%;
         filter:blur(20px);
-        transform: scale(6) rotate(120deg);
+        transform: scale(3) rotate(30deg);
     }
 }

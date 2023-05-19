@@ -10,14 +10,6 @@ const terminal_words = [
     "Navigate the site with the menu below.",
     "Or you can use the terminal.",
 
-    /** Programming lanuages I know */
-    "The languages I'm proficient in are...",
-    "Java",
-    "Bash scripting",
-    "Javascript, HTML, CSS for web development",
-    "Python development (also Flask framework)",
-    "C programming",
-
     /** Telling them to check out the rest of the site */
     "Check out the rest of the site.",
     "Beware of Hulk below... (●´⌓`●)"
