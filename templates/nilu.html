@@ -1,18 +1,23 @@
 <!DOCTYPE HTML>
 
 <body>
+
     <head>
         <!-- Adding the CSS style to the style sheet-->
         <link rel="stylesheet" href= " {{ url_for('static',filename='stylesheets/styles.css') }}">
         <script src="{{ url_for('static', filename='scripts/nilu.js') }}" defer></script>
+        <script src="{{ url_for('static', filename='scripts/particles.js') }}" defer></script>
+        <script src="{{ url_for('static', filename='scripts/app.js') }}" defer></script>
+
     </head>
+
+    <div id="particles-js"></div>
 
     <div class="outer_title_page_div">
         <div class="title_page_div">
             <h1 class="full_name_div">Nilushanth Thiruchelvam:$ <div id="full_name">&nbsp</div> </h1>
             <section class="routes">
                 <ul>
-                    <div class="hulk_smash_div"></div>
                     <li><a href="{{ url_for('home') }}">Home 🏡</a></li>
                     <li><a href="{{ url_for('about') }}">About 👀</a></li>
                     <li><a href="{{ url_for('skills') }}">Skills 📚</a></li>

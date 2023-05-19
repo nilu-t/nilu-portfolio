@@ -12,8 +12,6 @@ const terminal_words = [
 
     /** Telling them to check out the rest of the site */
     "Check out the rest of the site.",
-    "Beware of Hulk below... (●´⌓`●)"
-
 ];
 
 var delaySpeed = 30; //The delay speed in milliseconds.
@@ -42,7 +40,7 @@ function typeEachCharacter(){
     }
     else if(col < terminal_words[row].length){
         if(col == 0){
-            document.getElementById("full_name").innerHTML += "> <br>&nbsp>&nbsp";
+            document.getElementById("full_name").innerHTML += "> ";
         }
         document.getElementById("full_name").innerHTML += terminal_words[row][col];
         col++;
