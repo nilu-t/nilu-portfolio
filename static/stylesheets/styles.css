@@ -3,20 +3,21 @@
 body{
     height: 100vh; 
     width: 100vw; 
-    background-color: #000000; 
+    background-color: #111111; 
     background-size: 100vw 100vh;
     position: relative;
     overflow: hidden;
+    color: #E5E8E8; /* Brighter text color for readability */
+    font-family: Arial, sans-serif; /* Standardize font */
 }
 
 #particles-js
 {
     position: absolute;
-    height:65%;
-    background: #000;
+    height: 100%;
+    background: #111111;
     width: 100%;
 }
-
 
 .outer_title_page_div, .terminal_div {
     position:relative;
@@ -24,19 +25,19 @@ body{
 }
 
 p{
-    color: #5D6D7E;
+    color: #E5E8E8;
 }
 a:link{
-    color:#5D6D7E;
+    color:#E5E8E8;
     text-decoration: none;
 }
 
 a:visited{
-    color:#5D6D7E;
+    color:#E5E8E8;
 }
 
 a:hover{
-    color:#E5E8E8;
+    color:#00ffff; /* Brighter hover color for visibility */
 }
 
 /* Class and ID selector specific styles
@@ -50,20 +51,24 @@ a:hover{
     background-color: #111111;
     padding-left: 50px;
     border-radius: 25px;
-    border: 3px ridge #5D6D7E;
+    border: 3px ridge #00ffff;
     width: 65vw;
 }
 
 .full_name_div{
-    color: #5D6D7E;
+    color: #E5E8E8;
     font-size: xx-large;
     display: block;
+    text-shadow: 0 0 px #00ffff, 0 0 1px #00ffff, 0 0 1px #00ffff, 0 0 1px #00ffff; /* Glow effect */
+
 }
 
 #full_name{
-    color: #5D6D7E;
+    color: #E5E8E8;
     display: inline-block;
     position: absolute;
+    text-shadow: none;
+
 }
 
 #full_name::after{
@@ -72,7 +77,7 @@ a:hover{
     width:7px;
     height:25px;
     animation: blink-cursor 0.5s steps(2) infinite;
-    background: #5D6D7E;
+    background: #E5E8E8;
 }
 
 .routes{
@@ -85,33 +90,43 @@ a:hover{
 
 .routes ul li{
     display:inline-flex;
-    color:#5D6D7E;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 5px;
+    color:#E5E8E8;
+    padding: 10px 25px;
     border-radius: 10px;
-    font-size:large;
-    border-radius: 20px;
-    border: 1px ridge whitesmoke;
+    font-size: large;
+    border: 1px solid #00ffff;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for smooth hover effect */
+}
+
+.routes ul li:hover {
+    background: #00ffff;
+    color: #111111;
+    transform: scale(1.1);
 }
 
 .terminal_div {
     position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-25%, -50%);
-    text-shadow: -6px 0 6px #111111, 0 6px 6px #111111, 6px 0 6px #111111, 0 -6px 6px #111111;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 65%; /* Tweaking this to match with the width of the menu */
 }
 
 
 .instructions{
-    color:#5D6D7E;
+    color:#E5E8E8;
     display: block;
     text-shadow: -6px 0 6px #111111, 0 6px 6px #111111, 6px 0 6px #111111, 0 -6px 6px #111111;
 }
 
-.xterm_div .xterm .xterm-screen{
-    border: 5px ridge #5D6D7E;
+.xterm_div .xterm .xterm-screen {
+    border: 1px ridge #00ffff;
+    border-right: none;
+}
+
+
+.xterm .xterm-viewport {
+    border: 1px ridge #00ffff;
 }
 
 /* Animations for keyframes
@@ -119,5 +134,8 @@ a:hover{
 @keyframes blink-cursor {
     from{
         opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }

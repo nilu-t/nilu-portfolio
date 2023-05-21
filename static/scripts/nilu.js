@@ -8,10 +8,11 @@ const terminal_words = [
     
     /** Tell them about the site */
     "Navigate the site with the menu below.",
-    "Or you can use the terminal.",
+    "Use the terminal and try out some commands too!",
 
     /** Telling them to check out the rest of the site */
     "Check out the rest of the site.",
+    "Try hovering over the particles or clicking them !"
 ];
 
 var delaySpeed = 30; //The delay speed in milliseconds.

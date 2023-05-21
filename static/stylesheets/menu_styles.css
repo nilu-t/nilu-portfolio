@@ -1,53 +1,52 @@
-
 /* Global styles 
 ---------------------------------------------*/
 body{
-    height: 100vh; /* 100% of available height is filled */
-    width: 100vw; /* 100% of available width is filled */
-    background-image: linear-gradient(#000000,#032105, #032105, #000000);
-    color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+    background-color: #111111; 
+    color: #E5E8E8; 
+    font-family: Arial, sans-serif;
 }
 
 h1, h3, b{
-    color: #66FF00;
+    color: #00ffff; /* Changed to blue */
 }
 
 ul{
-    color: whitesmoke;
+    color: #E5E8E8;
 }
 
 /* Class and ID selector styles
 ---------------------------------------------*/
-
-/* common for all html files (excluding nilu.html obviously) */
 .controls_div{
-    padding-right: 80px;
-    padding-left: 80px;
+    padding: 80px;
 }
 
 .controls_div img{
     width: 80px;
     height: 80px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .controls_div img:hover{
     cursor:pointer;
+    transform: scale(1.1);
 }
 
-/* for contact_info.html specific styles. -------------------------------------------*/
+/* Styles for Contact Page
+------------------------------------------------*/
 .contact_div{
-    height:100vh; /* height is 100% of the available page height */
-    width: 100vw; /* width is 100% of the available page width */
+    height:100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .contact_info_div{
     font-size:xx-large;
     flex: 1;
-    border: 3px ridge #66FF00;
+    border: 3px solid #00ffff; /* Changed to blue */
     background-color: #111111;
     margin-right: 50px;
 }
@@ -60,136 +59,69 @@ ul{
     margin-left: 15px;
 }
 
-.email_div{
-    font-size:xx-large;
-    flex:2;
+/* Styling Form Elements
+------------------------------------------------*/
+input[type=text], input[type=submit], input[type=email], textarea[type=text]{
+    width: 70%;
+    background-color: transparent;
+    border: 1px solid #00ffff; /* Unifying border color */
+    font-size:large;
+    border-radius: 5px;
+    color: #00ffff; /* Unifying text color */
+    transition: border-color 0.3s ease-in-out; 
 }
 
-input[type=text], input[type=submit]{
-    /* attribute selector for type text*/
-    width: 70%;
-    background-color: transparent;
-    border: 1px ridge aqua;
-    font-size:large;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 5px;
-    color: aquamarine;
-}
-input[type=email]{
-    /* attribute selector for type email*/
-    width: 70%;
-    margin-bottom: 15px;
-    background-color: transparent;
-    border: 1px ridge aqua;
-    font-size:large;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 5px;
-}
-textarea[type=text]{
-    width: 70%;
-    background-color: transparent;
-    border: 1px ridge aqua;
-    font-size:large;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 5px;
-    resize: none;
-}
 input[type=submit]:hover{
     cursor: pointer;
-}
-input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=text]::placeholder{
-    color: aquamarine;
+    border-color: #66ccff; /* Brighten color on hover */
 }
 
-/* for skills.html specific styles. ------------------------------------------------- */
+input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=text]::placeholder{
+    color: #00ffff;
+}
+
+/* Styling Skills Page
+------------------------------------------------ */
 .skills_div{
     display:flex;
     flex-wrap: wrap;
     width: 100vw;
     height:100vh;
-    justify-content: center; /* centering in the middle of the main axis.*/
-    align-content: center; /* important for the multiline divs centering*/
+    justify-content: center; 
+    align-content: center;
 }
-.web_dev_div{
-    padding-right: 100px;
+
+.web_dev_div, .mobile_dev_div, .languages_div, .other_skills_div{
+    padding: 10px 100px;
     font-size: xx-large;
 }
-.web_dev_div h1{
+
+.web_dev_div h1, .mobile_dev_div h1, .languages_div h1, .other_skills_div h1{
    text-align: center;
 }
-.web_dev_div ul{
+
+.web_dev_div ul, .mobile_dev_div ul, .languages_div ul, .other_skills_div ul{
     list-style: none;
 }
-.web_dev_div ul li{
-    display:inline-flex; /* The list items behave like inline elements */
+
+.web_dev_div ul li, .mobile_dev_div ul li, .languages_div ul li, .other_skills_div ul li{
+    display:inline-flex; 
     background-color: #111111;
-    padding:10px 10px 10px 10px;
-    border: 1px ridge aqua;
+    padding:10px;
+    border: 1px solid #00ffff;
     border-radius: 10px;
-    color:aquamarine;
+    color:#00ffff;
     margin-bottom: 10px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
 
-.mobile_dev_div{
-    font-size: xx-large;
-
+.web_dev_div ul li:hover, .mobile_dev_div ul li:hover, .languages_div ul li:hover, .other_skills_div ul li:hover{
+    background-color: #002d4f;
+    transform: scale(1.1); 
 }
 
-.mobile_dev_div ul{
-    list-style: none;
-}
-.mobile_dev_div ul li{
-    display:inline-flex; /* The list items behave like inline elements */
-    background-color:#111111;
-    padding:10px 10px 10px 10px;
-    border: 1px ridge aqua;
-    border-radius: 10px;
-    color:aquamarine;
-    margin-bottom: 10px;
-
-
-}
-.languages_div{
-    font-size: xx-large;
-    padding-right: 100px;
-    padding-left: 180px; /* to align with 100px padding left + 80px back btn width*/
-}
-.languages_div h1{
-    text-align: center;
-}
-.languages_div ul{
-    list-style: none;
-}
-.languages_div ul li{
-    display: inline-flex; /* The list items behave like inline elements */
-    background-color:#111111;
-    padding:10px 10px 10px 10px;
-    border: 1px ridge aqua;
-    border-radius: 10px;
-    color:aquamarine;
-    margin-bottom: 10px;
-
-}
-.other_skills_div{
-    font-size: xx-large;
-}
-.other_skills_div h1{
-    text-align: center;
-}
-.other_skills_div ul{
-    list-style: none;
-}
-.other_skills_div ul li{
-    display: inline-flex; /* The list items behave like inline elements */
-    background-color:#111111;
-    padding:10px 10px 10px 10px;
-    border: 1px ridge aqua;
-    border-radius: 10px;
-    color:aquamarine;
-    margin-bottom: 10px;
-}
-
-/* for about.html specific styles. --------------------------------------------------------*/
+/* Styles for About Page
+--------------------------------------------------*/
 .about_div{
     height: 100vh;
     width: 100vw;
@@ -197,60 +129,74 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=tex
     align-items: center;
     padding-left: 10px;
 }
+
 .intro_div{
     background-color: #111111;
     font-size: xx-large;
-    border: 3px ridge #66FF00;
+    border: 3px solid #00ffff; /* Changed to blue */
     flex: 2;
 }
+
 .intro_div p{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px;
 }
+
 .intro_div h1{
     text-align: center;
 }
+
 .intro_div a{
     background-color: #000000;
-    border: #66FF00 3px ridge;
+    border: 3px solid #00ffff; /* Changed to blue */
     border-radius: 5px;
     text-decoration: none;
-    color:#66FF00;
+    color:#00ffff; /* Changed to blue */
+    transition: color 0.3s ease-in-out;
 }
+
 .intro_div a:visited{
-    color:#66FF00;
+    color:#00ffff;
 }
+
 .intro_div a:hover{
-    color:#85ff8f;
+    color:#66ccff;
 }
+
 .media_div{
     flex: 1;
     padding-left: 100px;
     font-size: x-large;
 }
+
 .media_div ul{
     list-style: none;
     display: inline;
 }
+
 .media_div ul li{
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     border-radius:10px;
-    border: 1px ridge aqua;
+    border: 1px solid #00ffff;
     display: inline-flex;
     background-color: #111111;
     margin-bottom: 10px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
+
+.media_div ul li:hover{
+    background-color: #002d4f;
+    transform: scale(1.1); 
+}
+
 .media_div ul li a{
     text-decoration: none;
-    color:aquamarine;
+    color:#00ffff;
 }
+
 .media_div ul li a:visited{
-    color:aquamarine;
+    color:#00ffff;
 }
+
 .media_div ul li a:hover{
-    color:#85ff8f;
+    color:#66ccff;
 }
-
-
-/* Keyframes
----------------------------------------------*/

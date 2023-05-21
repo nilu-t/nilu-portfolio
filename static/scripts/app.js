@@ -12,13 +12,13 @@ particlesJS('particles-js',
         "value": "#00ffff"
       },
       "shape": {
-        "type": "circle",
+        "type": "polygon",
         "stroke": {
           "width": 0,
           "color": "#000000"
         },
         "polygon": {
-          "nb_sides": 5
+          "nb_sides": 6
         }
       },
       "opacity": {
@@ -32,13 +32,13 @@ particlesJS('particles-js',
         }
       },
       "size": {
-        "value": 3,
-        "random": true,
+        "value": 3, // The average initial size of particles
+        "random": true, // Whether particles should have random initial sizes
         "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
+          "enable": true, // Enable size animation
+          "speed": 10, // The speed of size changes
+          "size_min": 0.1, // The minimum size to which particles will shrink
+          "sync": false // If set to true, all particles change size in unison
         }
       },
       "line_linked": {
